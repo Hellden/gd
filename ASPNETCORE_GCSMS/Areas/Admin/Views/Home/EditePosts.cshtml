@@ -1,0 +1,29 @@
+﻿@model ASPNETCORE_GCSMS.Areas.Admin.Models.PostViewModel
+@{
+	ViewData["Title"] = "EditPosts";
+	Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>Edition de Post</h2>
+
+<hr />
+		<form asp-route-returnurl="@ViewData["ReturnUrl"]">
+			@Html.TextAreaFor(model => model.Content, htmlAttributes: new { @rows = "10", @cols = "80", @id = "editor1" })
+			<button type="submit">Envoyer</button>
+		</form>
+
+
+		<script src="~/lib/ckeditor/ckeditor.js"></script>
+
+		<script>
+				CKEDITOR.replace('editor1', {
+					language: 'fr'
+				});
+		</script>
+<div>
+	<br />
+	<p>
+		<a asp-action="Posts">Retourner aux posts</a>
+	</p>
+</div>
+

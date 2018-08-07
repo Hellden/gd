@@ -1,0 +1,48 @@
+﻿@model IEnumerable<ASPNETCORE_GCSMS.Areas.Admin.Models.FormationViewModel>
+
+	@{
+		ViewData["Title"] = "Informatique";
+		Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+	}
+	<h2>Informatique</h2>
+
+	@if (!String.IsNullOrEmpty(Context.Request.QueryString.ToString()))
+	{
+		<p class="alert alert-success">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			Enregistrement effectué avec succèes.
+		</p>
+	}
+
+	@foreach (var item in Model)
+	{
+
+		if (item.Position == 1)
+		{
+			<h2>Présentation du service</h2>
+			@Html.Raw(item.Content)
+			<a asp-action="EditeServiceInformatique" asp-controller="Home" class="btn btn-default">Editer</a>
+			<hr />
+		}
+
+
+
+		if (item.Position == 2)
+		{
+			<h2>Contenu du Service</h2>
+
+			<div>
+				@Html.Raw(item.Content)
+			</div>
+
+			<a asp-action="EditeContenuInformatique" asp-controller="Home" class="btn btn-default">Editer</a>
+		}
+
+		if (item.Position == 3)
+		{
+			<h2>Contenu des Modals</h2>
+			@Html.Raw(item.Content)
+
+			<button>Editer</button>
+		}
+	}

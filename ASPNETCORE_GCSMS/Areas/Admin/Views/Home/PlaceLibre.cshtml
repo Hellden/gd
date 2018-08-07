@@ -1,0 +1,766 @@
+﻿@model ASPNETCORE_GCSMS.Areas.Admin.Models.EtablissementViewModel
+
+@using System
+
+@{
+	ViewData["Title"] = "PlaceLibre";
+	Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Places Libres</h2>
+
+<hr />
+<div class="row">
+	<div class="col-md-4">
+		@switch (Model.Nom)
+		{
+			case "Ancy le Franc Ehpad \"Résidence les Fontenottes\"":
+				<form asp-action="PlaceLibre">
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<input type="hidden" asp-for="Id" />
+					<div class="form-group">
+						<label asp-for="Nom" class="control-label"></label>
+						<input asp-for="Nom" class="form-control" disabled />
+						<span asp-validation-for="Nom" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Ehpad" class="control-label"></label>
+						<input asp-for="Ehpad" class="form-control" />
+						<span asp-validation-for="Ehpad" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Usa" class="control-label"></label>
+						<input asp-for="Usa" class="form-control" />
+						<span asp-validation-for="Usa" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Temporaire" class="control-label"></label>
+						<input asp-for="Temporaire" class="form-control" />
+						<span asp-validation-for="Temporaire" class="text-danger"></span>
+					</div>
+
+					<div class="form-group">
+						<label asp-for="IframeGoogle" class="control-label"></label>
+						<input asp-for="IframeGoogle" class="form-control" />
+						<span asp-validation-for="IframeGoogle" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Enregistrer" class="btn btn-default" />
+					</div>
+				</form>
+				break;
+
+
+			case "Auxerre Maison Départementale Retraite Yonne":
+
+				<form asp-action="PlaceLibre">
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<input type="hidden" asp-for="Id" />
+					<div class="form-group">
+						<label asp-for="Nom" class="control-label"></label>
+						<input asp-for="Nom" class="form-control" disabled />
+						<span asp-validation-for="Nom" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Ehpad" class="control-label"></label>
+						<input asp-for="Ehpad" class="form-control" />
+						<span asp-validation-for="Ehpad" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Usa" class="control-label"></label>
+						<input asp-for="Usa" class="form-control" />
+						<span asp-validation-for="Usa" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Uhr" class="control-label"></label>
+						<input asp-for="Uhr" class="form-control" />
+						<span asp-validation-for="Uhr" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Fam" class="control-label"></label>
+						<input asp-for="Fam" class="form-control" />
+						<span asp-validation-for="Fam" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Fah" class="control-label"></label>
+						<input asp-for="Fah" class="form-control" />
+						<span asp-validation-for="Fah" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Temporaire" class="control-label"></label>
+						<input asp-for="Temporaire" class="form-control" />
+						<span asp-validation-for="Temporaire" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Jour" class="control-label"></label>
+						<input asp-for="Jour" class="form-control" />
+						<span asp-validation-for="Jour" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Foyer" class="control-label"></label>
+						<input asp-for="Foyer" class="form-control" />
+						<span asp-validation-for="Foyer" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="IframeGoogle" class="control-label"></label>
+						<input asp-for="IframeGoogle" class="form-control" />
+						<span asp-validation-for="IframeGoogle" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Enregistrer" class="btn btn-default" />
+					</div>
+				</form>
+
+				break;
+
+
+			case "Brienon sur Armançon Ehpad \"Résidence Joséphine Normand\"":
+				<form asp-action="PlaceLibre">
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<input type="hidden" asp-for="Id" />
+					<div class="form-group">
+						<label asp-for="Nom" class="control-label"></label>
+						<input asp-for="Nom" class="form-control" disabled />
+						<span asp-validation-for="Nom" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Ehpad" class="control-label"></label>
+						<input asp-for="Ehpad" class="form-control" />
+						<span asp-validation-for="Ehpad" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Fam" class="control-label"></label>
+						<input asp-for="Fam" class="form-control" />
+						<span asp-validation-for="Fam" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Fah" class="control-label"></label>
+						<input asp-for="Fah" class="form-control" />
+						<span asp-validation-for="Fah" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="IframeGoogle" class="control-label"></label>
+						<input asp-for="IframeGoogle" class="form-control" />
+						<span asp-validation-for="IframeGoogle" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Enregistrer" class="btn btn-default" />
+					</div>
+				</form>
+				break;
+
+
+			case "Champcevrais Ehpad \"Château de Bouron\"":
+				<form asp-action="PlaceLibre">
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<input type="hidden" asp-for="Id" />
+					<div class="form-group">
+						<label asp-for="Nom" class="control-label"></label>
+						<input asp-for="Nom" class="form-control" disabled />
+						<span asp-validation-for="Nom" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Ehpad" class="control-label"></label>
+						<input asp-for="Ehpad" class="form-control" />
+						<span asp-validation-for="Ehpad" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Temporaire" class="control-label"></label>
+						<input asp-for="Temporaire" class="form-control" />
+						<span asp-validation-for="Temporaire" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Usa" class="control-label"></label>
+						<input asp-for="Usa" class="form-control" />
+						<span asp-validation-for="Usa" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Fam" class="control-label"></label>
+						<input asp-for="Fam" class="form-control" />
+						<span asp-validation-for="Fam" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Foyer" class="control-label"></label>
+						<input asp-for="Foyer" class="form-control" />
+						<span asp-validation-for="Foyer" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="IframeGoogle" class="control-label"></label>
+						<input asp-for="IframeGoogle" class="form-control" />
+						<span asp-validation-for="IframeGoogle" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Enregistrer" class="btn btn-default" />
+					</div>
+				</form>
+				break;
+
+
+			case "Charny Ehpad \"Résidence Vallée de l\'Ouanne\"":
+				<form asp-action="PlaceLibre">
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<input type="hidden" asp-for="Id" />
+					<div class="form-group">
+						<label asp-for="Nom" class="control-label"></label>
+						<input asp-for="Nom" class="form-control" disabled />
+						<span asp-validation-for="Nom" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Ehpad" class="control-label"></label>
+						<input asp-for="Ehpad" class="form-control" />
+						<span asp-validation-for="Ehpad" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Usa" class="control-label"></label>
+						<input asp-for="Usa" class="form-control" />
+						<span asp-validation-for="Usa" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Temporaire" class="control-label"></label>
+						<input asp-for="Temporaire" class="form-control" />
+						<span asp-validation-for="Temporaire" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="IframeGoogle" class="control-label"></label>
+						<input asp-for="IframeGoogle" class="form-control" />
+						<span asp-validation-for="IframeGoogle" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Enregistrer" class="btn btn-default" />
+					</div>
+				</form>
+				break;
+
+
+			case "Châtel Censoir Ehpad \"Résidence La Chatonnière\"":
+				<form asp-action="PlaceLibre">
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<input type="hidden" asp-for="Id" />
+					<div class="form-group">
+						<label asp-for="Nom" class="control-label"></label>
+						<input asp-for="Nom" class="form-control" disabled />
+						<span asp-validation-for="Nom" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Ehpad" class="control-label"></label>
+						<input asp-for="Ehpad" class="form-control" />
+						<span asp-validation-for="Ehpad" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Temporaire" class="control-label"></label>
+						<input asp-for="Temporaire" class="form-control" />
+						<span asp-validation-for="Temporaire" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="IframeGoogle" class="control-label"></label>
+						<input asp-for="IframeGoogle" class="form-control" />
+						<span asp-validation-for="IframeGoogle" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Enregistrer" class="btn btn-default" />
+					</div>
+				</form>
+				break;
+
+
+			case "Coulanges sur Yonne Ehpad \"Résidence Ste Clotilde\"":
+				<form asp-action="PlaceLibre">
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<input type="hidden" asp-for="Id" />
+					<div class="form-group">
+						<label asp-for="Nom" class="control-label"></label>
+						<input asp-for="Nom" class="form-control" disabled />
+						<span asp-validation-for="Nom" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Ehpad" class="control-label"></label>
+						<input asp-for="Ehpad" class="form-control" />
+						<span asp-validation-for="Ehpad" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="IframeGoogle" class="control-label"></label>
+						<input asp-for="IframeGoogle" class="form-control" />
+						<span asp-validation-for="IframeGoogle" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Enregistrer" class="btn btn-default" />
+					</div>
+				</form>
+				break;
+
+			case "Courson les Carrières Ehpad":
+
+				<form asp-action="PlaceLibre">
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<input type="hidden" asp-for="Id" />
+					<div class="form-group">
+						<label asp-for="Nom" class="control-label"></label>
+						<input asp-for="Nom" class="form-control" disabled />
+						<span asp-validation-for="Nom" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Ehpad" class="control-label"></label>
+						<input asp-for="Ehpad" class="form-control" />
+						<span asp-validation-for="Ehpad" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="IframeGoogle" class="control-label"></label>
+						<input asp-for="IframeGoogle" class="form-control" />
+						<span asp-validation-for="IframeGoogle" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Enregistrer" class="btn btn-default" />
+					</div>
+				</form>
+				break;
+
+
+			case "Isle sur Serein Ehpad":
+				<form asp-action="PlaceLibre">
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<input type="hidden" asp-for="Id" />
+					<div class="form-group">
+						<label asp-for="Nom" class="control-label"></label>
+						<input asp-for="Nom" class="form-control" disabled />
+						<span asp-validation-for="Nom" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Ehpad" class="control-label"></label>
+						<input asp-for="Ehpad" class="form-control" />
+						<span asp-validation-for="Ehpad" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Temporaire" class="control-label"></label>
+						<input asp-for="Temporaire" class="form-control" />
+						<span asp-validation-for="Temporaire" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="IframeGoogle" class="control-label"></label>
+						<input asp-for="IframeGoogle" class="form-control" />
+						<span asp-validation-for="IframeGoogle" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Enregistrer" class="btn btn-default" />
+					</div>
+				</form>
+				break;
+
+
+
+			case "Nantou-Pourrain Ehpad \"Château de Nantou\"":
+
+				<form asp-action="PlaceLibre">
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<input type="hidden" asp-for="Id" />
+					<div class="form-group">
+						<label asp-for="Nom" class="control-label"></label>
+						<input asp-for="Nom" class="form-control" disabled />
+						<span asp-validation-for="Nom" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Ehpad" class="control-label"></label>
+						<input asp-for="Ehpad" class="form-control" />
+						<span asp-validation-for="Ehpad" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Usa" class="control-label"></label>
+						<input asp-for="Usa" class="form-control" />
+						<span asp-validation-for="Usa" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Temporaire" class="control-label"></label>
+						<input asp-for="Temporaire" class="form-control" />
+						<span asp-validation-for="Temporaire" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="IframeGoogle" class="control-label"></label>
+						<input asp-for="IframeGoogle" class="form-control" />
+						<span asp-validation-for="IframeGoogle" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Enregistrer" class="btn btn-default" />
+					</div>
+				</form>
+				break;
+
+
+			case "Noyers sur Serein Ehpad":
+				<form asp-action="PlaceLibre">
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<input type="hidden" asp-for="Id" />
+					<div class="form-group">
+						<label asp-for="Nom" class="control-label"></label>
+						<input asp-for="Nom" class="form-control" disabled />
+						<span asp-validation-for="Nom" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Ehpad" class="control-label"></label>
+						<input asp-for="Ehpad" class="form-control" />
+						<span asp-validation-for="Ehpad" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Pasa" class="control-label"></label>
+						<input asp-for="Pasa" class="form-control" />
+						<span asp-validation-for="Pasa" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="IframeGoogle" class="control-label"></label>
+						<input asp-for="IframeGoogle" class="form-control" />
+						<span asp-validation-for="IframeGoogle" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Enregistrer" class="btn btn-default" />
+					</div>
+				</form>
+				break;
+
+
+			case "EHPAD de Pont-sur-Yonne et Villeblevin":
+				<form asp-action="PlaceLibre">
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<input type="hidden" asp-for="Id" />
+					<div class="form-group">
+						<label asp-for="Nom" class="control-label"></label>
+						<input asp-for="Nom" class="form-control" disabled />
+						<span asp-validation-for="Nom" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Ehpad" class="control-label"></label>
+						<input asp-for="Ehpad" class="form-control" />
+						<span asp-validation-for="Ehpad" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Usa" class="control-label"></label>
+						<input asp-for="Usa" class="form-control" />
+						<span asp-validation-for="Usa" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="IframeGoogle" class="control-label"></label>
+						<input asp-for="IframeGoogle" class="form-control" />
+						<span asp-validation-for="IframeGoogle" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Enregistrer" class="btn btn-default" />
+					</div>
+				</form>
+
+				break;
+
+
+			case "Ravières Ehpad \"Résidence Camille Rizier\"":
+				<form asp-action="PlaceLibre">
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<input type="hidden" asp-for="Id" />
+					<div class="form-group">
+						<label asp-for="Nom" class="control-label"></label>
+						<input asp-for="Nom" class="form-control" disabled />
+						<span asp-validation-for="Nom" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Ehpad" class="control-label"></label>
+						<input asp-for="Ehpad" class="form-control" />
+						<span asp-validation-for="Ehpad" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Usa" class="control-label"></label>
+						<input asp-for="Usa" class="form-control" />
+						<span asp-validation-for="Usa" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="IframeGoogle" class="control-label"></label>
+						<input asp-for="IframeGoogle" class="form-control" />
+						<span asp-validation-for="IframeGoogle" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Enregistrer" class="btn btn-default" />
+					</div>
+				</form>
+
+				break;
+
+
+			case "Saint Bris le Vineux Ehpad \"Résidence des Côteaux\"":
+				<form asp-action="PlaceLibre">
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<input type="hidden" asp-for="Id" />
+					<div class="form-group">
+						<label asp-for="Nom" class="control-label"></label>
+						<input asp-for="Nom" class="form-control" disabled />
+						<span asp-validation-for="Nom" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Ehpad" class="control-label"></label>
+						<input asp-for="Ehpad" class="form-control" />
+						<span asp-validation-for="Ehpad" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Pasa" class="control-label"></label>
+						<input asp-for="Pasa" class="form-control" />
+						<span asp-validation-for="Pasa" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Temporaire" class="control-label"></label>
+						<input asp-for="Temporaire" class="form-control" />
+						<span asp-validation-for="Temporaire" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="IframeGoogle" class="control-label"></label>
+						<input asp-for="IframeGoogle" class="form-control" />
+						<span asp-validation-for="IframeGoogle" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Enregistrer" class="btn btn-default" />
+					</div>
+				</form>
+				break;
+
+
+			case "Saint Fargeau Ehpad \"Résidence du Moulin de l\'Arche\"":
+				<form asp-action="PlaceLibre">
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<input type="hidden" asp-for="Id" />
+					<div class="form-group">
+						<label asp-for="Nom" class="control-label"></label>
+						<input asp-for="Nom" class="form-control" disabled />
+						<span asp-validation-for="Nom" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Ehpad" class="control-label"></label>
+						<input asp-for="Ehpad" class="form-control" />
+						<span asp-validation-for="Ehpad" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="IframeGoogle" class="control-label"></label>
+						<input asp-for="IframeGoogle" class="form-control" />
+						<span asp-validation-for="IframeGoogle" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Enregistrer" class="btn btn-default" />
+					</div>
+				</form>
+				break;
+
+
+			case "Saint Julien du Sault Ehpad \"Résidence St Julien\"":
+				<form asp-action="PlaceLibre">
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<input type="hidden" asp-for="Id" />
+					<div class="form-group">
+						<label asp-for="Nom" class="control-label"></label>
+						<input asp-for="Nom" class="form-control" disabled />
+						<span asp-validation-for="Nom" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Ehpad" class="control-label"></label>
+						<input asp-for="Ehpad" class="form-control" />
+						<span asp-validation-for="Ehpad" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="IframeGoogle" class="control-label"></label>
+						<input asp-for="IframeGoogle" class="form-control" />
+						<span asp-validation-for="IframeGoogle" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Enregistrer" class="btn btn-default" />
+					</div>
+				</form>
+
+				break;
+
+
+			case "Saint Sauveur en Puisaye Ehpad \"Résidence Gandrille en bel air\"":
+
+				<form asp-action="PlaceLibre">
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<input type="hidden" asp-for="Id" />
+					<div class="form-group">
+						<label asp-for="Nom" class="control-label"></label>
+						<input asp-for="Nom" class="form-control" disabled />
+						<span asp-validation-for="Nom" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Ehpad" class="control-label"></label>
+						<input asp-for="Ehpad" class="form-control" />
+						<span asp-validation-for="Ehpad" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Pasa" class="control-label"></label>
+						<input asp-for="Pasa" class="form-control" />
+						<span asp-validation-for="Pasa" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Usa" class="control-label"></label>
+						<input asp-for="Usa" class="form-control" />
+						<span asp-validation-for="Usa" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Temporaire" class="control-label"></label>
+						<input asp-for="Temporaire" class="form-control" />
+						<span asp-validation-for="Temporaire" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Jour" class="control-label"></label>
+						<input asp-for="Jour" class="form-control" />
+						<span asp-validation-for="Jour" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="IframeGoogle" class="control-label"></label>
+						<input asp-for="IframeGoogle" class="form-control" />
+						<span asp-validation-for="IframeGoogle" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Enregistrer" class="btn btn-default" />
+					</div>
+				</form>
+				break;
+
+
+			case "Seignelay Ehpad \"Résidence Colbert\"":
+				<form asp-action="PlaceLibre">
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<input type="hidden" asp-for="Id" />
+					<div class="form-group">
+						<label asp-for="Nom" class="control-label"></label>
+						<input asp-for="Nom" class="form-control" disabled />
+						<span asp-validation-for="Nom" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Ehpad" class="control-label"></label>
+						<input asp-for="Ehpad" class="form-control" />
+						<span asp-validation-for="Ehpad" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="IframeGoogle" class="control-label"></label>
+						<input asp-for="IframeGoogle" class="form-control" />
+						<span asp-validation-for="IframeGoogle" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Enregistrer" class="btn btn-default" />
+					</div>
+				</form>
+				break;
+
+
+			case "Thizy Ehpad ":
+				<form asp-action="PlaceLibre">
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<input type="hidden" asp-for="Id" />
+					<div class="form-group">
+						<label asp-for="Nom" class="control-label"></label>
+						<input asp-for="Nom" class="form-control" disabled />
+						<span asp-validation-for="Nom" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Ehpad" class="control-label"></label>
+						<input asp-for="Ehpad" class="form-control" />
+						<span asp-validation-for="Ehpad" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Pasa" class="control-label"></label>
+						<input asp-for="Pasa" class="form-control" />
+						<span asp-validation-for="Pasa" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Temporaire" class="control-label"></label>
+						<input asp-for="Temporaire" class="form-control" />
+						<span asp-validation-for="Temporaire" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="IframeGoogle" class="control-label"></label>
+						<input asp-for="IframeGoogle" class="form-control" />
+						<span asp-validation-for="IframeGoogle" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Enregistrer" class="btn btn-default" />
+					</div>
+				</form>
+
+				break;
+
+
+			case "Toucy Ehpad \"Résidence de la croix des vignes\"":
+				<form asp-action="PlaceLibre">
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<input type="hidden" asp-for="Id" />
+					<div class="form-group">
+						<label asp-for="Nom" class="control-label"></label>
+						<input asp-for="Nom" class="form-control" disabled />
+						<span asp-validation-for="Nom" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Ehpad" class="control-label"></label>
+						<input asp-for="Ehpad" class="form-control" />
+						<span asp-validation-for="Ehpad" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Usa" class="control-label"></label>
+						<input asp-for="Usa" class="form-control" />
+						<span asp-validation-for="Usa" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Temporaire" class="control-label"></label>
+						<input asp-for="Temporaire" class="form-control" />
+						<span asp-validation-for="Temporaire" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Jour" class="control-label"></label>
+						<input asp-for="Jour" class="form-control" />
+						<span asp-validation-for="Jour" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="IframeGoogle" class="control-label"></label>
+						<input asp-for="IframeGoogle" class="form-control" />
+						<span asp-validation-for="IframeGoogle" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Enregistrer" class="btn btn-default" />
+					</div>
+				</form>
+				break;
+
+
+			case "Vermenton Ehpad \"Résidence François Collet\"":
+				<form asp-action="PlaceLibre">
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<input type="hidden" asp-for="Id" />
+					<div class="form-group">
+						<label asp-for="Nom" class="control-label"></label>
+						<input asp-for="Nom" class="form-control" disabled />
+						<span asp-validation-for="Nom" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Ehpad" class="control-label"></label>
+						<input asp-for="Ehpad" class="form-control" />
+						<span asp-validation-for="Ehpad" class="text-danger"></span>
+					</div>chrome-extension://mpognobbkildjkofajifpdfhcoklimli/components/startpage/startpage.html?section=Speed-dials&activeSpeedDialIndex=0
+					<div class="form-group">
+						<label asp-for="Usa" class="control-label"></label>
+						<input asp-for="Usa" class="form-control" />
+						<span asp-validation-for="Usa" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="IframeGoogle" class="control-label"></label>
+						<input asp-for="IframeGoogle" class="form-control" />
+						<span asp-validation-for="IframeGoogle" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Enregistrer" class="btn btn-default" />
+					</div>
+				</form>
+				break;
+
+
+			default:
+				break;
+		}
+	</div>
+</div>
+
+
+@if (!String.IsNullOrEmpty(Context.Request.QueryString.ToString()))
+{
+	<p class="alert alert-success">
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		Enregistrement effectué avec succèes.
+	</p>
+}

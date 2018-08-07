@@ -1,0 +1,50 @@
+﻿@model ASPNETCORE_GCSMS.Areas.Admin.Models.UtilisateurViewModel
+@using System.Security.Claims;
+
+@{
+	ViewData["Title"] = "Nouvelle Utilisateur";
+	Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<hr />
+<div class="row">
+	<div class="col-md-4">
+		<form asp-action="NouvelleUtilisateur">
+			<div asp-validation-summary="All" class="text-danger"></div>
+			@if (User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Role).Value == "SuperAdmin")
+			{
+				<div class="form-group">
+					<label asp-for="Etablissement" class="control-label"></label>
+					<select asp-for="Etablissement">
+						<option value="1">Ancy</option>
+					</select>
+					<span asp-validation-for="Etablissement" class="text-danger"></span>
+				</div>
+			}
+			<div class="form-group">
+				<label asp-for="Username" class="control-label"></label>
+				<input asp-for="Username" class="form-control" />
+				<span asp-validation-for="Username" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Password" class="control-label"></label>
+				<input asp-for="Password" type="password" class="form-control" />
+				<span asp-validation-for="Password" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Role" class="control-label"></label>
+				<select asp-for="Role">
+					<option>Lecteur</option>
+					<option>Editeur</option>
+					<option>Administrateur</option>
+				</select>
+				<span asp-validation-for="Role" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<input type="submit" value="Création" class="btn btn-default" />
+			</div>
+		</form>
+	</div>
+</div>

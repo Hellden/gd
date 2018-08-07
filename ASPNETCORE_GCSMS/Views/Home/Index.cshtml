@@ -1,0 +1,223 @@
+﻿<!--  		  .-""""-.
+			 /        \
+			/_        _\
+		   // \      / \\
+		   |\__\    /__/|
+			\    ||    /
+			 \        /
+			  \  __  /  \  /          ________________________________
+			   '.__.'    \/          /                                 \
+				|  |     /\         |    Dev : Raphaël CHAPOTIN         |
+				|  |    O  O        |    Project : gepy89.fr            |
+				----    //         O \_________________________________/
+			   (    )  //        O
+			  (\\     //       o
+			 (  \\    )      o
+			 (   \\   )   /\
+   ___[\______/^^^^^^^\__/) o-)__
+  |\__[=======______//________)__\
+  \|_______________//____________|
+	  |||      || //||     |||
+	  |||      ||  .||     |||
+	   ||      \/  .\/      ||
+				  . .
+				 '.'.`
+-->
+
+@model ModalTicketViewModel
+
+@{
+	Layout = null;
+	ViewBag.Title = "Bienvenue sur le site du GEPY";
+}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr-FR">
+<head>
+	<!--[if IE]>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<![endif]-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>GEPY – Groupement Ehpad Publics Yonne</title>
+	<meta name="robots" content="noindex,follow">
+
+	<!-- environment -->
+	<environment include="Development">
+		<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" type="text/css" media="all">
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto%3A100%2C300%2C400%2C500%2C700%7C900%7Citalic&amp;subset=latin%2Clatin-ext" type="text/css" media="all">
+		<link rel="stylesheet" href="~/css/default.css" type="text/css" media="all">
+		<link href="~/css/map.css" media="all" rel="stylesheet" type="text/css" />
+	</environment>
+	<environment exclude="Development">
+		<link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+			  asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+			  asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto%3A100%2C300%2C400%2C500%2C700%7C900%7Citalic&amp;subset=latin%2Clatin-ext" type="text/css" media="all">
+		<link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+	</environment>
+	<!-- /environement -->
+</head>
+
+
+<body class="home blog">
+	<!--Header Top Layer Section-->
+	<div class="header-top-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-6">
+					<ul class="head-contact-info">
+						<li><button data-toggle="modal" data-target="#contact" class="btn btn-default" href="@Url.Action("ModalContact","Home")">Contact@gepy89.fr</button></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--/Header Top Layer Section-->
+	<!-- .navbar -->
+	<div class="navbar navbar-wrapper navbar-inverse navbar-static-top" role="navigation">
+		<div class="container">
+			<!-- .navbar-header -->
+			<div class="navbar-header">
+				<a class="navbar-brand" asp-controller="Home" asp-action="Index">
+					<div class="wallstreet_title_head">@ViewBag.Title</div>
+				</a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<!-- /.navbar-header -->
+			<!-- Collect the nav links, forms, and other content for toggling  .navbar-collapse -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul id="menu-main" class="nav navbar-nav navbar-right">
+					<li><a asp-controller="Home" asp-action="Index">Accueil</a></li>
+					<li><a asp-controller="Home" asp-action="PlaceLibre">Places Libres</a></li>
+					<li><a asp-controller="Home" asp-action="Formations">Nos Formations</a></li>
+					<li><a asp-controller="Home" asp-action="Projets">Nos Projets</a></li>
+					<li><a asp-area="Account" asp-controller="Home" asp-action="Login">Espace Adhérent</a></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div>
+	</div>
+	<!-- /.navbar -->
+
+	<div class="modal fade" id="contact" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+			</div>
+		</div>
+	</div>
+
+	<!-- .homepage_mycarousel -->
+	<div class="homepage_mycarousel">
+		<div class="static-banner">
+			<img class="img-responsive" alt="Sleek &amp; Beautiful" src="~/Images/Banner.jpg">
+			<div class="flex-slider-center">
+				<div class="slide-text-bg1"><h1>Groupement Ehpad Publics Yonne</h1></div>
+			</div>
+		</div>
+	</div>
+	<!-- /.homepage_mycarousel -->
+	<!-- .service-section -->
+	<div class="service-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-6 service-effect">
+					<a href="/Home/Valeurs">
+						<div class="service-box">
+							<img class="img-responsive service-box-image" alt="Sleek &amp; Beautiful" src="~/Images/NosValeurs.jpg">
+						</div>
+						<div class="service-area">
+							<h2 style="color:white">Nos Valeurs</h2>
+						</div><!-- / service-area -->
+					</a>
+				</div> <!-- / service-effect column -->
+
+				<div class="col-md-4 col-sm-6 service-effect">
+					<a href="/Home/EtablissementAdherents">
+						<div class="service-box">
+							<img class="img-responsive service-box-image" alt="Sleek &amp; Beautiful" src="~/Images/yonne.jpg">
+						</div>
+						<div class="service-area">
+							<h2 style="color:white">Établissements Adhérents</h2>
+						</div><!-- / service-area -->
+					</a>
+				</div> <!-- / service-effect column -->
+
+				<div class="col-md-4 col-sm-6 service-effect">
+					<a href="/Home/Actions">
+						<div class="service-box">
+							<img class="img-responsive service-box-image" alt="Sleek &amp; Beautiful" src="~/Images/Actions.jpg">
+						</div>
+						<div class="service-area">
+							<h2 style="color:white">Nos Actions</h2>
+						</div><!-- / service-area -->
+					</a>
+				</div> <!-- / service-effect column -->
+			</div>
+
+
+			@* PARTENAIRES *@
+			<div class="row">
+				<hr />
+				<br />
+				<div class="col-md-2 col-sm-4" style="margin-left: 35px;">
+					<a href="https://www.ars.sante.fr/>"><img class="service-box-image" alt="Sleek &amp; Beautiful" src="~/Images/Partenaires/ars.jpg"></a>
+				</div>
+
+				<div class="col-md-2 col-sm4" style="margin-right: 110px;">
+					<a href="http://www.lyonne.com/"><img class=" service-box-image" alt="Sleek &amp; Beautiful" src="~/Images/Partenaires/CD89.jpg"></a>
+				</div>
+
+				<div class="col-md-2 col-sm4" style="margin-right: 33px;">
+					<a href="http://www.fhf.fr/"><img class=" service-box-image" alt="Sleek &amp; Beautiful" src="~/Images/Partenaires/FHF.png"></a>
+				</div>
+
+				<div class="col-md-2 col-sm4">
+					<a href="http://www.gcs-syhn.fr/"><img class="service-box-image" alt="Sleek &amp; Beautiful" src="~/Images/Partenaires/logo-ght.png"></a>
+				</div>
+
+				<div class="col-md-2 col-sm4">
+					<a href="#"><img class="service-box-image" alt="Sleek &amp; Beautiful" src="~/Images/Partenaires/GRAP.jpg"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.service-section -->
+	@*Footer Section*@
+	<div class="footer_section">
+		<div class="container">
+			<div class="row footer-widget-section">
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="footer-copyright">
+						<p> Copyright  @DateTime.Now.Year - GEPY - <a asp-action="Politique" asp-controller="Home">Politique de Confidentialité</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<environment include="Development">
+		<script src="~/lib/jquery/dist/jquery.js"></script>
+		<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+	</environment>
+
+	<environment exclude="Development">
+		<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+				asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+				asp-fallback-test="window.jQuery"
+				crossorigin="anonymous"
+				integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+		</script>
+		<script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+				asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+				asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+				crossorigin="anonymous"
+				integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+		</script>
+	</environment>
+</body>
+</html>

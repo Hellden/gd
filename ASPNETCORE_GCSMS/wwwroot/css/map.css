@@ -1,0 +1,38 @@
+﻿.map__image{
+    width: 100%;
+    height: 100%;
+    float:left;
+}
+
+.map__image svg{
+    height: 90%;
+    width: 70%;
+}
+
+.map__image circle{
+    fill: #f10707;
+}
+
+.map__image a.is-active circle{
+    fill:#00C2A9;
+}
+
+.map__list{
+    float: right;
+    width: 25%;
+    margin-top: -70%;
+    line-height:50px;
+    color: white;
+}
+
+.map__list a{
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.map__list a.is-active{
+    color:#0a8cc8;
+    font-weight: bold;
+    text-decoration: underline;
+}

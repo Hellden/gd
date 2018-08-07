@@ -1,0 +1,56 @@
+﻿@model IEnumerable<ASPNETCORE_GCSMS.Areas.Admin.Models.UtilisateurViewModel>
+@using System.Security.Claims;
+
+
+@{
+	ViewData["Title"] = "Utilisateur";
+	Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Utilisateur</h2>
+
+<p>
+	<a asp-action="NouvelleUtilisateur">Nouvelle Utilisateur</a>
+</p>
+
+<table class="table">
+	<thead>
+		<tr>
+			@if (User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Role).Value == "SuperAdmin")
+			{
+				<th>
+					@Html.DisplayNameFor(model => model.Etablissement)
+				</th>
+			}
+			<th>
+				@Html.DisplayNameFor(model => model.Username)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Role)
+			</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				@if (User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Role).Value == "SuperAdmin")
+				{
+					<td>
+						@Html.DisplayFor(modelItem => item.Etablissement)
+					</td>
+				}
+				<td>
+					@Html.DisplayFor(modelItem => item.Username)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Role)
+				</td>
+				<td>
+					<a asp-action="Delete" asp-route-id="@item.Id">Supprimer</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

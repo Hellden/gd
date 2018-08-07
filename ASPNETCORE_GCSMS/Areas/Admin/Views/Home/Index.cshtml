@@ -1,0 +1,83 @@
+﻿@{
+	ViewData["Title"] = "Accueil";
+	Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<section class="accueilSection">
+	<div class="padding80 bgcolor-voilet">
+		<div class="col-md-7">
+			<h2>Get started now !</h2><br />
+			<p class="tmargin10">
+				L'administration permet d'ajouter, modifier et supprimer certaines pages du site web du GCSMS de l'YONNE. <br /><br />
+
+				De nombreuses fonctionnalités seront rajouté au fil du temps, un peu de patience.
+			</p><br />
+
+			<a href="" class="btn btn-default btn-round tmargin30" data-toggle="modal" data-target="#myModal">En savoir plus</a>
+		</div>
+
+		<div class="col-md-5">
+			<img class="img-responsive tmargin40" src="http://demo.xpeedstudio.com/html/seopress/demo/assets/images/advertising-img.png" alt="Chania" width="460" height="345">
+		</div>
+	</div>
+</section>
+
+
+<section class="accueilActu accueilSection">
+	<div class="col-md-12">
+		<br /><br /><h2 class="accueilTitleCenter">Nouvelle actualité</h2><br />
+
+		<div class="col-md-6">
+			<center>
+				<img src="~/Images/Admin/Accueil/backend.png" alt="Backend" width="250" height="250" />
+				<h3>Un nouveau Backend en dévéloppement</h3>
+			</center>
+			<p>
+				<i>La partie gestion est vouée à évoluer au fil du temps avec les différentes demandes des utilisateurs. Rien n'est fixe, tout bougé !</i>
+			</p>
+		</div>
+
+
+		<div class="col-md-6 accueilActuPost">
+			<center>
+				<img src="~/Images/Admin/Accueil/evolution.png" alt="Backend" width="500" height="200" />
+				<h3 style="margin-top:65px">Un site en évolution constante</h3>
+			</center>
+			<p>
+				<i>Des mises à jour régulières seront appliquées. Amélioratoin diverse -> Graphique, Application, Configuration, etc...</i>
+			</p>
+		</div>
+	</div>
+</section>
+
+
+
+@*Modal en Savoir Plus*@
+<!-- .modal -->
+<div class="modal fade" id="myModal"role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">Fonctionnalité en cours de développement.</h4>
+			</div>
+			<div class="modal-body">
+				<ul>
+					<li>Mise en place du HTTPS pour sécuriser les données.</li>
+					<li><del>Amélioration de la saisie (ajouts de fonctionnalités) pour l'édition des groupes formations.</del></li>
+					<li><del>Ajout d'un onglet gestion des Utilisateur avec rattacchement à la structure d'appartenance.</del></li>
+					<li>Amélioration de la gestion du contenu du site, type CMS.</li>
+					<li>Refonte de la page Nos projets.</li>
+					<li>Gestion des posts Actualité dans l'espace Adhérent.</li>
+					<li>Correction de bug divers.</li>
+					<li><del>Prise en charge du Responsive.</del></li>
+					<li>Amélioration du code Backend.</li>
+					<li>Création d'un espace de stockage pour le partage de fichiers.</li>
+					<li>Mise en place de SASS pour alléger le code css et le chargement du site.</li>
+					<li>Utilisation de Compass à définir.</li>
+				</ul>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

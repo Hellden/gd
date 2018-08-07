@@ -1,0 +1,96 @@
+﻿@model IEnumerable<ASPNETCORE_GCSMS.Models.HomeViewModels.FormationViewModel>
+
+@{
+	ViewBag.Title = "Nos Formations";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+	<p style="text-align:justify; color:white;">
+		Depuis Février 2017, le GEPY est habilité à dispenser des formations professionnelles dans le secteur sanitaire, social et médico-social.<br /><br />
+	</p>
+	<h3 style="text-align:justify;font-weight:normal; color:white;">En tant qu’organisme de formation il vous accompagne avec son équipe de professionnels dans une dynamique de formation continue dans les domaines d’activités suivants :</h3><br />
+</div>
+
+@foreach (var item in Model)
+{
+	@* HOTELIERE *@
+
+	@if (item.Categorie == "Hoteliere")
+	{
+		<a asp-controller="Home" asp-action="Hoteliere" title="Cliquez pour plus de détails">
+			<div>
+				<div class="contentFormation">
+					<p>
+						<img class="contentFormation-img1" src="~/Images/Formation/hoteliere.jpg"/>
+						@Html.Raw(item.Content)
+					</p>
+				</div>
+			</div>
+		</a>
+		<hr />
+	}
+
+
+	@* RESSOURCES HUMAINES *@
+	@if (item.Categorie == "RH")
+	{
+		<a asp-controller="Home" asp-action="RH" title="Cliquez pour plus de détails">
+			<div>
+				<div class="contentFormation">
+					<p>
+						<img class="contentFormation-img2" src="~/Images/Formation/RH.jpg" /><br />
+						@Html.Raw(item.Content)
+					</p>
+				</div>
+			</div>
+		</a>
+
+		<hr />
+	}
+
+
+	@* INFORMATIQUE *@
+	@if (item.Categorie == "Informatique")
+	{
+		<a asp-controller="Home" asp-action="Informatique" title="Cliquez pour plus de détails">
+			<div>
+				<div class="contentFormation">
+					<p>
+						<img class="contentFormation-img3" src="~/Images/Formation/Informatique.jpg"/>
+						@Html.Raw(item.Content)
+					</p>
+				</div>
+			</div>
+		</a>
+
+		<hr />
+	}
+
+
+
+	@* ETHIQUE *@
+	@if (item.Categorie == "Ethique")
+	{
+		<a asp-controller="Home" asp-action="Ethique" title="Cliquez pour plus de détails">
+			<div>
+				<div class="contentFormation">
+					<p>
+						<img class="contentFormation-img4" src="~/Images/Formation/ethique.png" />
+						@Html.Raw(item.Content)
+					</p>
+				</div>
+			</div>
+		</a>
+
+	}
+}
+	<hr />
+
+
+<div>
+	<p style="color:white;">
+		<br /><br />
+		Ces formations sont réalisées « sur mesure » dans les établissements demandeurs. Un devis personnalisé est réalisé après l’étude des demandes spécifiques des établissements. Contact formation :  <a href="mailto:fonction-formation@gepy89.fr">fonction-formation@gepy89.fr</a>
+	</p>
+</div>

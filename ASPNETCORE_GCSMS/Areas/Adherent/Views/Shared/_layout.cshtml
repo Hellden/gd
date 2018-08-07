@@ -1,0 +1,131 @@
+﻿@{
+	Layout = null;
+}
+
+@using System.Security.Claims;
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr-FR">
+<head>
+	<!--[if IE]>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<![endif]-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>G.C.S.M.S EHPAD de l'YONNE – Groupement des EHPAD de l'YONNE</title>
+	<meta name="robots" content="noindex,follow">
+
+	<!-- environment -->
+	<environment include="Development">
+		<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" type="text/css" media="all">
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto%3A100%2C300%2C400%2C500%2C700%7C900%7Citalic&amp;subset=latin%2Clatin-ext" type="text/css" media="all">
+		<link rel="stylesheet" href="~/css/default.css" type="text/css" media="all">
+		<link href="~/css/map.css" media="all" rel="stylesheet" type="text/css" />
+	</environment>
+	<environment exclude="Development">
+		<link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+			  asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+			  asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto%3A100%2C300%2C400%2C500%2C700%7C900%7Citalic&amp;subset=latin%2Clatin-ext" type="text/css" media="all">
+		<link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+	</environment>
+	<!-- /environement -->
+</head>
+<body>
+	<!--Header Top Layer Section-->
+	<div class="header-top-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-1">
+					@if (User.Identity.IsAuthenticated)
+					{
+						<form asp-area="Account" asp-controller="Home" asp-action="Logout" method="post" id="logoutForm" class="navbar-right">
+							<button type="submit" class="btn btn-link navbar-btn navbar-link"><img src="~/Images/logout.jpg" alt="Déconnexion" width="30" height="30" /></button>
+						</form>
+					}
+				</div>
+
+				<div class="col-sm-offset-10">
+					<h4>Bienvenue @User.Identity.Name <br /> Rôle: @User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Role).Value</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--/Header Top Layer Section-->
+	<!--Header Logo & Menus-->
+	<div class="navbar navbar-wrapper navbar-inverse navbar-static-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<!-- logo -->
+				<a class="navbar-brand" asp-controller="Adherent" asp-action="Index">
+					<div class="wallstreet_title_head">@ViewBag.Title</div>
+				</a>
+				@*Affiche le menu en réduit*@
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul id="menu-main" class="nav navbar-nav navbar-right">
+					<li><a asp-controller="Home" asp-action="Index">Accueil</a></li>
+					<li><a asp-controller="Home" asp-action="Index">Protocoles</a></li>
+					<li><a asp-controller="Home" asp-action="Index">Compte-Rendu</a></li>
+					<li><a asp-area="Admin" asp-controller="Home" asp-action="Index">Administration</a></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div>
+	</div>
+
+	<div class="container-fluid" style="margin-top:110px;">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="blog-detail-section">
+					<div class="clear"></div>
+					<div class="blog-post-title">
+						<div class="blog-post-title-wrapper" style="width:100%" ;>
+							@RenderBody()
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="footer_section">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="footer-copyright">
+						<p> Copyright  2017 - GCSMS </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<environment include="Development">
+		<script src="~/lib/jquery/dist/jquery.js"></script>
+		<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+	</environment>
+
+	<environment exclude="Development">
+		<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+				asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+				asp-fallback-test="window.jQuery"
+				crossorigin="anonymous"
+				integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+		</script>
+		<script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+				asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+				asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+				crossorigin="anonymous"
+				integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+		</script>
+	</environment>
+</body>
+</html>

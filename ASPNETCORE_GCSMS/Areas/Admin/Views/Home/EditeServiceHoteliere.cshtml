@@ -1,0 +1,26 @@
+﻿@model ASPNETCORE_GCSMS.Areas.Admin.Models.FormationViewModel
+@{
+	ViewData["Title"] = "EditeServiceHoteliere";
+	Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<h2>Editer Service Hotellière</h2>
+
+<hr />
+<div class="row">
+	<div class="col-md-12">
+		<form asp-route-returnurl="@ViewData["ReturnUrl"]" method="POST">
+			<div asp-validation-summary="ModelOnly"></div>
+			<input type="hidden" asp-for="Id" />
+			@Html.TextAreaFor(model => model.Content, htmlAttributes: new { @rows = "150", @cols = "180", @id = "editor1" })<br />
+			<button type="submit" class="btn btn-primary">Envoyer</button>
+		</form>
+	</div>
+</div>
+
+@section scripts{
+	<script>
+		CKEDITOR.replace('editor1', {
+			language: 'fr',
+		});
+	</script>
+}

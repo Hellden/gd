@@ -1,0 +1,396 @@
+﻿@model IEnumerable<ASPNETCORE_GCSMS.Models.HomeViewModels.EtablissementViewModel>
+
+@{
+    ViewData["Title"] = "Places Libres";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <h1>Places Libres dans les EHPAD du GEPY :</h1><br /> <br />
+
+    <table class="fixed_headers table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Etablissements</th>
+                <th scope="col"><span data-tooltip="Hébergement Permanent" data-tooltip-position="top">Permanent</span></th>
+                <th scope="col"><span data-tooltip="Hébergement Temporaire" data-tooltip-position="top">Temporaire</span></th>
+                <th scope="col"><span data-tooltip="Accueil de Jour" data-tooltip-position="top">ADJ</span></th>
+                <th scope="col"><span data-tooltip="Unité de Soins Alzheimer" data-tooltip-position="top">USA</span></th>
+                <th scope="col"><span data-tooltip="Unité d'Hébergement Renforcé" data-tooltip-position="top">UHR</span></th>
+                <th scope="col"><span data-tooltip=" Pôles d'Activités et de Soins Adaptés" data-tooltip-position="top">PASA</span></th>
+                <th scope="col"><span data-tooltip="Foyer d'Accueil Médicalisé" data-tooltip-position="top">FAM</span></th>
+                <th scope="col"><span data-tooltip="Foyer pour Adultes Handicapés" data-tooltip-position="top">FAH</span></th>
+                <th scope="col">Foyer de vie</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                switch (item.Nom)
+                {
+                    case "Ancy le Franc Ehpad \"Résidence les Fontenottes\"":
+                        <tr>
+                            <th scope="row">@item.Nom</th>
+                            <td>@item.Ehpad</td>
+                            <td>@item.Temporaire</td>
+                            <td></td>
+                            <td>@item.Usa</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        break;
+
+
+                    case "Auxerre Maison Départementale Retraite Yonne":
+                        <tr>
+                            <th scope="row">@item.Nom</th>
+                            <td>@item.Ehpad</td>
+                            <td>@item.Temporaire</td>
+                            <td>@item.Jour</td>
+                            <td>@item.Usa</td>
+                            <td>@item.Uhr</td>
+                            <td>@item.Pasa</td>
+                            <td>@item.Fam</td>
+                            <td>@item.Fah</td>
+                            <td>@item.Foyer</td>
+                        </tr>
+                        break;
+
+
+                    case "Brienon sur Armançon Ehpad \"Résidence Joséphine Normand\"":
+                        <tr>
+                            <th scope="row">@item.Nom</th>
+                            <td>@item.Ehpad</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>@item.Fam</td>
+                            <td>@item.Fah</td>
+                            <td></td>
+                        </tr>
+                        break;
+
+
+                    case "Champcevrais Ehpad \"Château de Bouron\"":
+                        <tr>
+                            <th scope="row">@item.Nom</th>
+                            <td>@item.Ehpad</td>
+                            <td>@item.Temporaire</td>
+                            <td></td>
+                            <td>@item.Usa</td>
+                            <td></td>
+                            <td></td>
+                            <td>@item.Fam</td>
+                            <td></td>
+                            <td>@item.Foyer</td>
+                        </tr>
+                        break;
+
+
+                    case "Charny Ehpad \"Résidence Vallée de l\'Ouanne\"":
+                        <tr>
+                            <th scope="row">@item.Nom</th>
+                            <td>@item.Ehpad</td>
+                            <td>@item.Temporaire</td>
+                            <td></td>
+                            <td>@item.Usa</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        break;
+
+
+                    case "Châtel Censoir Ehpad \"Résidence La Chatonnière\"":
+                        <tr>
+                            <th scope="row">@item.Nom</th>
+                            <td>@item.Ehpad</td>
+                            <td>@item.Temporaire</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        break;
+
+                    case "Coulanges sur Yonne Ehpad \"Résidence Ste Clotilde\"":
+                        <tr>
+                            <th scope="row">@item.Nom</th>
+                            <td>@item.Ehpad</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                        </tr>
+                        break;
+
+
+                    case "Courson les Carrières Ehpad":
+                        <tr>
+                            <th scope="row">@item.Nom</th>
+                            <td>@item.Ehpad</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        break;
+
+
+                    case "Isle sur Serein Ehpad":
+                        <tr>
+                            <th scope="row">@item.Nom</th>
+                            <td>@item.Ehpad</td>
+                            <td>@item.Temporaire</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        break;
+
+
+                    case "Nantou-Pourrain Ehpad \"Château de Nantou\"":
+                        <tr>
+                            <th scope="row">@item.Nom</th>
+                            <td>@item.Ehpad</td>
+                            <td>@item.Temporaire</td>
+                            <td></td>
+                            <td>@item.Usa</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        break;
+
+
+                    case "Noyers sur Serein Ehpad":
+                        <tr>
+                            <th scope="row">@item.Nom</th>
+                            <td>@item.Ehpad</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>@item.Pasa</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        break;
+
+
+                    case "EHPAD de Pont-sur-Yonne et Villeblevin":
+                        <tr>
+                            <th scope="row">@item.Nom</th>
+                            <td>@item.Ehpad</td>
+                            <td></td>
+                            <td></td>
+                            <td>@item.Usa</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        break;
+
+
+                    case "Ravières Ehpad \"Résidence Camille Rizier\"":
+                        <tr>
+                            <th scope="row">@item.Nom</th>
+                            <td>@item.Ehpad</td>
+                            <td></td>
+                            <td></td>
+                            <td>@item.Usa</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        break;
+
+
+                    case "Saint Bris le Vineux Ehpad \"Résidence des Côteaux\"":
+                        <tr>
+                            <th scope="row">@item.Nom</th>
+                            <td>@item.Ehpad</td>
+                            <td>@item.Temporaire</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>@item.Pasa</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        break;
+
+
+                    case "Saint Fargeau Ehpad \"Résidence du Moulin de l\'Arche\"":
+                        <tr>
+                            <th scope="row">@item.Nom</th>
+                            <td>@item.Ehpad</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        break;
+
+
+                    case "Saint Julien du Sault Ehpad \"Résidence St Julien\"":
+                        <tr>
+                            <th scope="row">@item.Nom</th>
+                            <td>@item.Ehpad</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        break;
+
+
+                    case "Saint Sauveur en Puisaye Ehpad \"Résidence Gandrille en bel air\"":
+                        <tr>
+                            <th scope="row">@item.Nom</th>
+                            <td>@item.Ehpad</td>
+                            <td>@item.Temporaire</td>
+                            <td>@item.Jour</td>
+                            <td></td>
+                            <td></td>
+                            <td>@item.Pasa</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        break;
+
+
+                    case "Seignelay Ehpad \"Résidence Colbert\"":
+                        <tr>
+                            <th scope="row">@item.Nom</th>
+                            <td>@item.Ehpad</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        break;
+
+
+                    case "Thizy Ehpad ":
+                        <tr>
+                            <th scope="row">@item.Nom</th>
+                            <td>@item.Ehpad</td>
+                            <td>@item.Temporaire</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>@item.Pasa</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        break;
+
+
+                    case "Toucy Ehpad \"Résidence de la croix des vignes\"":
+                        <tr>
+                            <th scope="row">@item.Nom</th>
+                            <td>@item.Ehpad</td>
+                            <td>@item.Temporaire</td>
+                            <td>@item.Jour</td>
+                            <td>@item.Usa</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        break;
+
+
+                    case "Vermenton Ehpad \"Résidence François Collet\"":
+                        <tr>
+                            <th scope="row">@item.Nom</th>
+                            <td>@item.Ehpad</td>
+                            <td></td>
+                            <td></td>
+                            <td>@item.Usa</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        break;
+
+
+                    default:
+                        break;
+                }
+
+
+            }
+        </tbody>
+    </table>
+
+    <br />
+    Case vide: Service non disponible.
+</div>
+
+
+
+
+@*
+    <th scope="row">@item.Nom</th>
+    <td>@item.Ehpad</td>
+    <td>@item.Temporaire</td>
+    <td>@item.Jour</td>
+    <td>@item.Usa</td>
+    <td>@item.Uhr</td>
+    <td>@item.Pasa</td>
+    <td>@item.Fam</td>
+    <td>@item.Fah</td>
+    <td>@item.Foyer</td>
+*@

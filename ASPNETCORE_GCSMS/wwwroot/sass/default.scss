@@ -1,0 +1,310 @@
+﻿//Declaration variable
+$color-turquoise: #00c2a9;
+$title-wrapper: #00c2a9;
+$color-white: #FFFFFF;
+$section-background: #3d4049;
+$navbar-color: #FFFFFF;
+$font-family: 'roboto';
+
+body {
+    background-color: #2a2c33;
+    color: white;
+    font-family: $font-family,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.header-top-area {
+    margin-top: -50px;
+    background: none repeat scroll 0 0 $color-turquoise;
+}
+
+/*Gestion des vignettes*/
+.service-area {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid $color-white;
+
+    &:hover {
+        background: $color-turquoise;
+        border: 1px solid $color-turquoise;
+    }
+}
+
+/*Background modifier pour la partie corps*/
+.blog-detail-section {
+    background-color: $section-background;
+}
+
+
+/*Menu*/
+.wallstreet_title_head {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 50px;
+}
+
+.navbar-inverse {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-bottom: 0;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin-top: 0px;
+    z-index: 20;
+}
+
+.navbar-brand {
+    font-family: $font-family;
+    font-weight: 300;
+    font-size: 40px;
+    height: auto;
+    line-height: 40px;
+    padding: 22.5px 15px 22.5px 0px;
+    margin-right: 50px;
+}
+
+.navbar-inverse .navbar-brand {
+    color: $navbar-color;
+}
+
+.navbar > .container .navbar-brand {
+    margin-left: 0px;
+}
+
+.navbar .navbar-nav > .active > a,
+.navbar .navbar-nav > .active > a:hover,
+.navbar .navbar-nav > .active > a:focus {
+    color: $navbar-color;
+}
+
+.navbar .navbar-nav > .open > a,
+.navbar .navbar-nav > .open > a:hover,
+.navbar .navbar-nav > .open > a:focus {
+    color: $navbar-color;
+}
+
+.navbar .navbar-nav > li > a {
+    line-height: 20px;
+    padding: 40px 19px;
+    border-radius: 0px 0px 0px 0px;
+    color: $navbar-color;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+/*Top Header Contact*/
+.head-contact-info {
+    display: block;
+    float: right;
+    margin: 10px 0;
+    padding: 0;
+    li{
+        color: $navbar-color;
+        display: inline-block;
+        font-weight: 400;
+        font-size: 15px;
+        margin-right: 0px;
+        padding: 0;
+    }
+}
+
+/*Homepage Carrousel*/
+
+.flex-slider-center {
+    float: none;
+    height: auto;
+    left: 0;
+    margin: 0 auto;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 45%;
+    width: 1140px;
+    z-index: 0;
+}
+
+.slide-text-bg1 {
+    float: none;
+    margin: 0 0 20px;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    width: auto;
+    z-index: 773;
+    h1{
+        font-weight: 300;
+        font-size: 80px;
+        font-weight: normal;
+        letter-spacing: 0;
+        line-height: 65px;
+        margin: 0 0 0;
+        text-align: center;
+        color: white;
+    }
+}
+
+.static-banner {
+    position: relative;
+    overflow: hidden;
+    max-height: 750px;
+}
+
+/*Homepage Service Section*/
+
+.service-section {
+    padding: 70px 0 20px;
+}
+
+.service-box {
+    display: block;
+    margin-bottom: -120px;
+    position: relative;
+    z-index: 0;
+    img{
+        border: 2px solid #FFFFFF;
+        border-radius: 100%;
+        margin: 0 auto 16px;
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.service-area {
+    margin: 0 0 60px;
+    padding: 127px 30px 30px;
+    transition: background 0.3s ease-in-out 0s;
+    h2{
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 30px;
+        margin: 0 0 11px;
+        text-align: center;
+    }
+}
+
+.blog-post-title {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    padding: 40px 30px 30px;
+}
+
+//Couleur turquoise des h1 avec un infinement de la police avec le font-weight
+.blog-post-title-wrapper h1{
+    margin: 0 0 20px;
+    font-weight: 300;
+	color: $title-wrapper;
+}
+
+/*Table Place Libre*/
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td
+{
+    padding: 12px;
+}
+
+th {
+    color: #2a2c33;
+    background: #eeeeee;
+    border-bottom: 4px solid #eeeeee;
+    border-right: none;
+    font-size: 15px;
+    font-weight: 100;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 500;
+}
+
+tr:nth-child(odd) td {
+    background: #2a2c33;
+}
+
+td {
+    background: #3d3f47;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 300;
+    font-size: 18px;
+    border-right: 1px solid #ff0000;
+}
+
+
+/*Adherent Section*/
+.actuSection {
+    border-style: solid;
+}
+
+/*FORMATION*/
+.contentFormation {
+	border-width: 1px;
+	border-style: ridge;
+	border-color: aquamarine;
+	padding: 15px;
+	color: white;
+	line-height: 25px;
+	text-align: justify;
+	}
+.modal{
+	color:black;
+	h4{
+		color:$color-turquoise;
+	}
+}
+
+//Hoteliere
+.contentFormation-img1 {
+	float:right;
+	width: 300px;
+	height: 300px;
+	margin: 15px 0px 15px 15px;
+}
+
+//RH
+.contentFormation-img2 {
+	float: left;
+	width: 300px;
+	height: 300px;
+	margin: 15px 15px 15px 0px;
+}
+
+//Informatique
+.contentFormation-img3 {
+	float: right;
+	width: 300px;
+	height: 300px;
+	margin: 15px 0px 15px 15px;
+}
+
+//Ethique
+.contentFormation-img4 {
+	float: left;
+	width: 300px;
+	height: 300px;
+	margin: 15px 15px 15px 0px;
+}
+
+//
+
+
+/*Footer Section*/
+.footer-copyright {
+    padding: 20px 0;
+    p {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        margin: 0;
+        text-align: center;
+    }
+}

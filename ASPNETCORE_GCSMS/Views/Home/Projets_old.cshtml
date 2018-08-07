@@ -1,0 +1,229 @@
+﻿@model ModalTicketViewModel
+@{
+	Layout = null;
+	ViewBag.Title = "Nos Projets";
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr-FR">
+<head>
+	<!--[if IE]>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<![endif]-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>G.C.S.M.S EHPAD de l'YONNE – Groupement des EHPAD de l'YONNE</title>
+	<meta name="robots" content="noindex,follow">
+
+	<!-- environment -->
+	<environment include="Development">
+		<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" type="text/css" media="all">
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto%3A100%2C300%2C400%2C500%2C700%7C900%7Citalic&amp;subset=latin%2Clatin-ext" type="text/css" media="all">
+		<link rel="stylesheet" href="~/styles/css/default.css" type="text/css" media="all">
+		<link href="~/css/map.css" media="all" rel="stylesheet" type="text/css" />
+	</environment>
+	<environment exclude="Development">
+		<link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+			  asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+			  asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto%3A100%2C300%2C400%2C500%2C700%7C900%7Citalic&amp;subset=latin%2Clatin-ext" type="text/css" media="all">
+		<link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+	</environment>
+	<!-- /environement -->
+
+</head>
+<body>
+	<!--Header Top Layer Section-->
+	<div class="header-top-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-6">
+					<ul class="head-contact-info">
+						<li><button data-toggle="modal" data-target="#contact" class="btn btn-default" href="@Url.Action("ModalContact","Home")">Contact@gcsms.fr</button></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--/Header Top Layer Section-->
+	<!-- .navbar -->
+	<div class="navbar navbar-wrapper navbar-inverse navbar-static-top" role="navigation">
+		<div class="container">
+			<!-- .navbar-header -->
+			<div class="navbar-header">
+				<a class="navbar-brand" asp-controller="Home" asp-action="Index">
+					<div class="wallstreet_title_head">@ViewBag.Title</div>
+				</a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<!-- /.navbar-header -->
+			<!-- Collect the nav links, forms, and other content for toggling  .navbar-collapse -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul id="menu-main" class="nav navbar-nav navbar-right">
+					<li><a asp-controller="Home" asp-action="Index">Accueil</a></li>
+					<li><a asp-controller="Home" asp-action="PlaceLibre">Places Libres</a></li>
+					<li><a asp-controller="Home" asp-action="Formations">Nos Formations</a></li>
+					<li><a asp-controller="Home" asp-action="Projets">Nos Projets</a></li>
+					<li><a asp-area="Account" asp-controller="Home" asp-action="Login">Espace Adhérent</a></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div>
+	</div>
+	<!-- /.navbar -->
+
+	<div class="container" style="margin-top:110px;">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="blog-detail-section">
+					<div class="blog-post-title">
+						<p>
+							<img src="~/Images/Projets/telemedecine.jpg" alt="Télé-médecine" style="width:180px;height:150px;float:left;margin-right:20px" />
+						</p>
+						<p style="color:white;margin-top:35px;">
+							Mise en place concertée avec la filière gériatrique locale de la télémédecine dans les Ehpad du GCSMS en réponse à l’appel à projets de l’ARS de Bourgogne Franche Comté. Étude des besoins des établissements, choix des spécialités à mettre en œuvre, sélection des sites internes au GCSMS, concertation avec les ressources locales du corps médical (CHA, CHS, MSP, médecins généralistes et spécialistes, etc.)
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="blog-detail-section">
+					<div class="blog-post-title">
+						<p>
+							<img src="~/Images/Projets/evaluation.jpg" style="width:180px;height:150px;float:left;margin-right:20px" />
+						</p>
+						<p style="color:white; margin-top:40px;">
+							Mise en place d’une expertise pour les évaluations internes des établissements. Réalisation d’évaluations internes dans les établissements du GCSMS, mais aussi dans des établissements externes, dans le cadre des textes en vigueur.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="blog-detail-section">
+					<div class="blog-post-title">
+						<p>
+							<img src="~/Images/Projets/qualite.jpg" style="width:180px;height:150px;float:left;margin-right:20px" />
+						</p>
+						<p style="color:white;margin-top:40px;">
+							Développement d’une mission « qualité » commune visant à assurer la mise en œuvre et le suivi des recommandations soulignées par les évaluations.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="blog-detail-section">
+					<div class="blog-post-title">
+						<p>
+							<img src="~/Images/Projets/expertise-medicale.jpg" style="width:150px;height:180px;float:left;margin-right:20px" />
+						</p>
+						<p style="color:white;margin-top:40px;">
+							Recrutement par le GCSMS d’une expertise médicale chargée d’assurer la conception, la coordination et l’efficience des actions médicales liées au GCSMS et d’entretenir la liaison avec le corps médical local.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="blog-detail-section">
+					<div class="blog-post-title">
+						<p>
+							<img src="~/Images/Projets/ethique.jpg" style="width:180px;height:150px;float:left;margin-right:20px" />
+						</p>
+						<p style="color:white;margin-top:40px;">
+							Mise en place d’un Comité d’éthique interne au GCSMS.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="blog-detail-section">
+					<div class="blog-post-title">
+						<p>
+							<img src="~/Images/Projets/formation.jpg" style="width:180px;height:150px;float:left;margin-right:20px" />
+						</p>
+						<p style="color:white; margin-top:40px">
+							Développement de la fonction « formation » afin d’assurer l’autonomie et la pérennité du GCSMS.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="blog-detail-section">
+					<div class="blog-post-title">
+						<p>
+							<img src="~/Images/Projets/eprd.png" style="width:180px;height:150px;float:left;margin-right:20px" />
+						</p>
+						<p style="color:white; margin-top:40px">
+							Recours, sur la base nouvelle des EPRD, à une expertise pour étudier la structure financière des établissements.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer_section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="footer-copyright">
+						<p> Copyright  2017 - GCSMS </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<environment include="Development">
+		<script src="~/lib/jquery/dist/jquery.js"></script>
+		<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+	</environment>
+
+	<environment exclude="Development">
+		<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+				asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+				asp-fallback-test="window.jQuery"
+				crossorigin="anonymous"
+				integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+		</script>
+		<script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+				asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+				asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+				crossorigin="anonymous"
+				integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+		</script>
+	</environment>
+</body>
+</html>
