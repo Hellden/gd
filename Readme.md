@@ -1,4 +1,40 @@
-# ASPNETCORE_GCSMS
+**EN**
+
+# ASPNETCORE
+
+### Prerequisite
+ - IIS
+ - [.Net Core SDK] (https://www.microsoft.com/net/download/windows)
+ - SQL Server Express (tested on 2016 and 2017)
+ - SQL Server Management
+ 
+Load the project on Visual Studio and create the Web Deploy package in build release.
+
+### IIS configuration
+ - Create a GCSMS directory
+ - Create the site gcsms.fr
+ - In the application pool
+    - .NET CLR Version -> No Managed Code (Reserved for ASP.NET CORE)
+    - Managed pipeline mode -> integrated
+ - Import WebDploy package created previously (Install WebDeploy version 3.5)
+ - Fill in the following connection string:
+ 
+
+> `Server =. \\ sqlexpress; Integrated Security = true; Database = ASPNETCORE_GCSMS`
+
+
+### Assign rights to the sql database for the IIS Application Pool user.
+Log in to *. \ Sqlexpress * with SQL Server Management with your local account.
+
+We will put the rights on the database ASPNETCORE_GCSMS to the user ** [IIS APPPOOL \ gcsms.fr] **, think to put in role of the Server ** sysadmin **
+
+Start the Website, it should be functional !!
+
+### ENJOY
+
+
+**FR**
+# ASPNETCORE
 
 ### Prérequis
  - IIS
