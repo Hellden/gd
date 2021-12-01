@@ -1,7 +1,7 @@
-**EN**
+
 
 # ASPNETCORE
-
+**EN**
 ### Prerequisite
  - IIS
  - [.Net Core SDK] (https://www.microsoft.com/net/download/windows)
@@ -33,9 +33,9 @@ Start the Website, it should be functional !!
 ### ENJOY
 
 
-**FR**
-# ASPNETCORE
 
+# ASPNETCORE
+**FR**
 ### Prérequis
  - IIS
  - [.Net Core SDK](https://www.microsoft.com/net/download/windows)
